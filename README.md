@@ -1,5 +1,8 @@
 # Insta-k3ds
-Fast Setup for K3d clusters
+
+- Fast Setup for K3d clusters with TLS enabled
+- Longhorn and CloudNativePG installation not yet included
+- Manage firewall settings where relevant
 
 ## 1. Add or remove initial HA host
 
