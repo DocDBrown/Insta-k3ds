@@ -22,7 +22,7 @@
 ./k3d-mac-teardown.sh
 ```
 
-## 3. Add or remove workers later 
+## 3. Add or remove workers later (Linux environment)
 
 ```bash
 curl -sfL https://get.k3s.io | K3S_URL=https://<MASTER_IP>:6443 K3S_TOKEN=my-super-secret-cluster-token sh -s - agent
@@ -31,7 +31,7 @@ curl -sfL https://get.k3s.io | K3S_URL=https://<MASTER_IP>:6443 K3S_TOKEN=my-sup
 /usr/local/bin/k3s-uninstall.sh
 ```
 
-## 4. Add or remove HA nodes later 
+## 4. Add or remove HA nodes later (Linux environment) 
 
 ```bash
 curl -sfL https://get.k3s.io | K3S_TOKEN=my-super-secret-cluster-token sh -s - server --server https://<ip>:<port>
