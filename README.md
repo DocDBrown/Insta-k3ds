@@ -1,8 +1,13 @@
 # Insta-k3ds
 
 - Fast Setup for K3d clusters with TLS enabled
-- Longhorn and CloudNativePG installation not yet included
-- Manage firewall settings where relevant
+- Setup multiple HA etcd nodes for a multi-node cluster starting with three master/ server nodes and 3 worker nodes on one computer with a shell script.
+- To achieve etcd HA K3s are setup in server mode on multiple nodes, each with its own etcd instance that is part of a cluster.
+- A script that automates the setup of three K3s HA server nodes (control plane nodes) with HA etcd as the data store and secrets encryption enabled.
+- It uses mTLS for securing the etcd communication and AES-CBC encryption for Kubernetes secrets.
+- Sets up AES-CBC encryption for Kubernetes secrets, ensuring that secrets stored in etcd are encrypted at rest.
+- It configures the first K3s node to act as the first control plane node.
+- Configures the node's internal and external IPs and ensures proper certificates are generated for secure access.
 
 ## 1. Add or remove initial HA host
 
