@@ -34,4 +34,13 @@ echo "Removing CNI (Network) Configurations..."
 rm -rf /etc/cni
 rm -rf /opt/cni
 
+echo "Removing Podman containers..."
+# Note: podman usually doesn't require sudo if running rootless, 
+# but since the script enforces root, sudo is redundant but harmless here.
+podman rm -f k3s-server-1 k3s-server-2 k3s-server-3 \
+             k3s-agent-1  k3s-agent-2  k3s-agent-3 || echo "Podman containers not found."
+
+echo "Removing local artifacts..."
+rm -rf ./k3s-data ./kubeconfig
+
 echo "Cleanup Complete. K3s has been fully removed."
