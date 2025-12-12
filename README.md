@@ -12,7 +12,9 @@
 ## 1. Add or remove initial HA host
 
 ```bash
-./k3d-setup.sh
+sudo bash setup.sh
+export KUBECONFIG="./kubeconfig/k3s-server-1-kubeconfig.yaml"
+kubectl get nodes
 ```
 ```bash
 ./k3d-teardown.sh
