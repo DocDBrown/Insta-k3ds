@@ -8,7 +8,7 @@
 - Sets up AES-CBC encryption for Kubernetes secrets, ensuring that secrets stored in etcd are encrypted at rest.
 - It configures the first K3s node to act as the first control plane node.
 - Configures the node's internal and external IPs and ensures proper certificates are generated for secure access.
-- Dont use "my-super-secret-cluster-token"
+- Dont use "my-super-secret-cluster-token" (HINT: openssl rand -hex 16)
 
 ## 1. Add or remove initial HA host
 
