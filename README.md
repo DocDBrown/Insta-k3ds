@@ -12,7 +12,7 @@
 ## 1. Add or remove initial HA host
 
 ```bash
-sudo bash setup.sh
+sudo bash k3d-setup.sh
 export KUBECONFIG="./kubeconfig/k3s-server-1-kubeconfig.yaml"
 kubectl get nodes
 ```
