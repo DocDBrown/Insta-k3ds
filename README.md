@@ -8,16 +8,19 @@
 - Sets up AES-CBC encryption for Kubernetes secrets, ensuring that secrets stored in etcd are encrypted at rest.
 - It configures the first K3s node to act as the first control plane node.
 - Configures the node's internal and external IPs and ensures proper certificates are generated for secure access.
+- Dont use "my-super-secret-cluster-token"
 
 ## 1. Add or remove initial HA host
 
 ```bash
+mkdir -p ./k3s-data
+echo "my-super-secret-cluster-token" > ./k3s-data/cluster-token
 sudo bash k3d-setup.sh
 export KUBECONFIG="./kubeconfig/k3s-server-1-kubeconfig.yaml"
 kubectl get nodes
 ```
 ```bash
-./k3d-teardown.sh
+sudo bash k3d-teardown.sh
 ```
 
 ## 2. Add or remove MacOS nodes
